@@ -8,7 +8,7 @@ describe("ToDoItem", () => {
   test("deveria renderizar o item corretamente", () => {
     const item = {
       description: "Aprender Jest",
-      createdAt: "2025-08-26T10:00:00Z",
+      createdAt: "2026-08-26T10:00:00Z",
       completed: false,
     };
 
@@ -19,7 +19,7 @@ describe("ToDoItem", () => {
     );
 
     expect(getByText("Aprender Jest")).toBeInTheDocument();
-    expect(getByText("26/08/2025")).toBeInTheDocument();
+    expect(getByText("26/08/2026")).toBeInTheDocument();
     expect(getByRole("checkbox")).not.toBeChecked();
   });
 
@@ -27,7 +27,7 @@ describe("ToDoItem", () => {
     const funcaoSimulandoSelectTodoForEdit = jest.fn();
     const item = {
       description: "Editar Jest",
-      createdAt: "2025-08-26T10:00:00Z",
+      createdAt: "2026-08-26T10:00:00Z",
       completed: false,
     };
 
@@ -47,7 +47,7 @@ describe("ToDoItem", () => {
     const funcaoSimulandoRemoveTodo = jest.fn();
     const item = {
       description: "Excluir Jest",
-      createdAt: "2025-08-26T10:00:00Z",
+      createdAt: "2026-08-26T10:00:00Z",
       completed: false,
     };
 
@@ -67,7 +67,7 @@ describe("ToDoItem", () => {
     const funcaoSimulandoRemoveTodo = jest.fn();
     const item = {
       description: "Excluir Jest",
-      createdAt: "2025-08-26T10:00:00Z",
+      createdAt: "2026-08-26T10:00:00Z",
       completed: false,
     };
 
