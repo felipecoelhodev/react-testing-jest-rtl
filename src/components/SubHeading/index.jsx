@@ -6,7 +6,7 @@ export function SubHeading({ children }) {
 
   useEffect(() => {
     setTimeout(() => {
-      setDescription("O que vamos aprender?");
+      setDescription("O que vamos estudar?");
     }, 500);
   }, []);
 

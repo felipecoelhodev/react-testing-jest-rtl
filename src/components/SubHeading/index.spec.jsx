@@ -26,7 +26,7 @@ describe("SubHeading", () => {
     test("deveria renderizar a descrição após 500ms", async () => {
       const { findByText } = render(<SubHeading>Para estudar</SubHeading>);
 
-      const description = await findByText("O que vamos aprender?");
+      const description = await findByText("O que vamos estudar?");
 
       expect(description).toBeInTheDocument();
     });

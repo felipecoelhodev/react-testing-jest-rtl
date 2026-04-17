@@ -1,18 +1,32 @@
 import { useEffect, useState } from "react";
 import { getTodos } from "../../services/TodoService";
+import { IconRefresh } from "../icons";
 import "./todo-count.style.css";
 
 export function ToDoCount() {
   const [count, setCount] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
 
-  useEffect(() => {
-    const fetchTodos = async () => {
+  const fetchTodos = async () => {
+    setIsLoading(true);
+    try {
       const todosFromApi = await getTodos();
       setCount(todosFromApi.length);
-    };
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
+  useEffect(() => {
     fetchTodos();
   }, []);
 
-  return <span className="todo-count">{count}</span>;
+  return (
+    <div className="todo-count-container">
+      <span className="todo-count">{count}</span>
+      <button disabled={isLoading} className="btn" aria-label="refresh" onClick={fetchTodos}>
+        <IconRefresh />
+      </button>
+    </div>
+  );
 }
