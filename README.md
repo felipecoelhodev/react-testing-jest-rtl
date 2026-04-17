@@ -1,8 +1,10 @@
 #  Checklist de Estudos (React + Testing Stack)
 
-Este projeto é um gerenciador de planos de estudos desenvolvido para elevar o nível de qualidade de aplicações React. Além de feito uma aplicação de checklist de estudos totalmente funcional, outro foco foi tornar o código **confiável, robusto e manutenível** através da implementação prática de testes automatizados e das melhores práticas de desenvolvimento moderno.
+Um gerenciador de planos de estudos robusto desenvolvido para elevar o padrão de qualidade em aplicações React. Indo além de um CRUD básico, o projeto foca na criação de um ecossistema confiável, robusto e manutenível, utilizando as melhores práticas de desenvolvimento moderno e uma arquitetura totalmente testável.
 
-Ao longo do desenvolvimento, foi aplicado a **Pirâmide de Testes** para garantir que cada camada da aplicação (lógica, componentes e fluxos) esteja devidamente protegida. Serão feitas atualizações futuras que além de adicionar novas funcionalidades, serão feito mais testes englobando ainda mais a aplicação.
+A estratégia de desenvolvimento foi guiada pela Pirâmide de Testes, garantindo que cada camada da aplicação — da lógica de negócio aos componentes e fluxos de usuário — esteja devidamente protegida. Para isso, utiliza-se Jest e React Testing Library em testes unitários e de integração, além de Cypress para testes de ponta a ponta (E2E).
+
+Construído com React 19 e Vite, o projeto utiliza a Context API (com o novo hook use) para gerenciamento de estado global e consome uma API REST simulada via JSON Server. É o repositório ideal para quem busca uma referência sólida de como configurar e escalar um ambiente de testes completo. O projeto segue em constante evolução, com atualizações planejadas para expandir tanto suas funcionalidades quanto a sua cobertura de testes.
 
 ---
 
